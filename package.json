@@ -1,11 +1,31 @@
 {
     "name": "electron-tutorial",
     "packageManager": "yarn@4.1.1",
+    "version": "1.0.1",
     "devDependencies": {
+        "@electron-forge/cli": "^7.3.0",
+        "@electron-forge/maker-deb": "^7.3.0",
+        "@electron-forge/maker-rpm": "^7.3.0",
+        "@electron-forge/maker-squirrel": "^7.3.0",
+        "@electron-forge/maker-zip": "^7.3.0",
+        "@electron-forge/plugin-auto-unpack-natives": "^7.3.0",
+        "@electron-forge/plugin-fuses": "^7.3.0",
+        "@electron/fuses": "^1.7.0",
         "electron": "^29.1.1"
     },
     "main": "main.js",
     "scripts": {
-        "start": "electron ."
-    }
+        "start": "electron-forge start",
+        "package": "electron-forge package",
+        "make": "electron-forge make"
+    },
+    "dependencies": {
+        "electron-squirrel-startup": "^1.0.0"
+    },
+    "author": {
+        "name": "Joao Pedro Vital",
+        "email": "joaopedrovitaldoctum@gmail.com",
+        "url": "https://github.com/jotavital"
+    },
+    "description": "Following the Electron tutorial!"
 }
